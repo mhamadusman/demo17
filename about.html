@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compact Navbar with Dropdown</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.container-fluid.bottom-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar-toggler {
+    margin-right: 0;
+}
+
+.navbar-toggler-icon {
+    font-size: 24px;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+}
+
+.navbar-brand,
+.navbar-toggler {
+    padding: 0;
+}
+
+.navbar-brand,
+.navbar-toggler,
+.navbar-toggler-icon {
+    line-height: 1;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    vertical-align: middle;
+}
+
+.form-control {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    background-color: transparent;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.input-group .btn:hover {
+    color: #495057;
+}
+
+.dropdown-menu {
+    min-width: 150px; /* Adjust to better fit content */
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid bottom-shadow fixed-top no-gutters m-0 p-0">
+    <div class="container px-3">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <i class="fa-solid fa-cart-shopping me-1"></i>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="navbar-brand">FreshCart</a>
+            </div>
+            <div class="col">
+                <form class="position-relative">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search Product" aria-label="Search">
+                        <button class="btn" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-auto">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Orders</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="col-auto">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
